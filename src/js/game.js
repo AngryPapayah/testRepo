@@ -53,10 +53,10 @@ export class Game extends Engine {
 
         // Shark toevoegen
         for (let i = 0; i < 10; i++) {
-            const shark = new Shark();
+            const shark = new Shark()
             shark.graphics.use(Resources.Shark.toSprite());
-            shark.pos = new Vector(Math.random() * 200 - 100, Math.random() * 200 - 100);
-            shark.vel = new Vector(Math.random() * 200 - 100, Math.random() * 200 - 100);
+            shark.pos =  new Vector(Math.random() * 1280, Math.random() * 720)
+            shark.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
             this.add(shark);
 
         }
