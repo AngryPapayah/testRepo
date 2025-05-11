@@ -3,6 +3,8 @@ import { Actor, Engine, Vector, DisplayMode } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
 import { Fish } from './fish.js'
 import { Mofusand } from './mofusand.js'
+import { Shark } from './shark.js'
+import { Bubbles } from './bubbles.js'
 
 
 
@@ -52,16 +54,19 @@ export class Game extends Engine {
         }
 
         // Shark toevoegen
-        for (let i = 0; i < 10; i++) {
-            const shark = new Actor()
-            shark.graphics.use(Resources.Shark.toSprite());
-            shark.scale = new Vector(0.25, 0.25)
-            shark.pos =  new Vector(Math.random() * 1280, Math.random() * 720)
-            shark.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
+            const shark = new Shark()
+            // shark.graphics.use(Resources.Shark.toSprite());
+            // shark.scale = new Vector(0.25, 0.25)
+            // shark.pos =  new Vector(Math.random() * 1280, Math.random() * 720)
+            // shark.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
             this.add(shark);
+        
+            // Bubbles toevoegen
+        for (let i = 0; i < 20; i++) {
+            const bubbles = new Bubbles()
+            this.add(bubbles)
 
         }
-       
 
     }
 
