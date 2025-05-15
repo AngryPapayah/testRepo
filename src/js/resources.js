@@ -7,6 +7,7 @@ const Resources = {
     Background: new ImageSource('images/backgroundSea.jpg'),
     Shark: new ImageSource('images/shark.webp'),
     Bubbles: new ImageSource('images/bubbles.png'),
+    ScaredFish: new ImageSource('images/scaredFish.png'),
 }
 
 

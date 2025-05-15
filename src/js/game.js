@@ -8,6 +8,7 @@ import { Bubbles } from './bubbles.js'
 
 
 
+
 export class Game extends Engine {
 
     constructor() {
@@ -22,7 +23,6 @@ export class Game extends Engine {
 
     startGame() {
         console.log("start de game!")
-
         // Achtergrond toevoegen
         const background = new Actor();
         background.graphics.use(Resources.Background.toSprite());
@@ -40,6 +40,7 @@ export class Game extends Engine {
             this.add(fish)
 
         }
+
         // Mofusand toevoegen
         for (let i = 0; i < 10; i++) {
 
@@ -50,22 +51,34 @@ export class Game extends Engine {
             // mofusand.vel = new Vector(Math.random() * 200 - 100, Math.random() * 200 - 100)
             // mofusand.events.on("exitviewport", (e) => this.fishLeft(e))
             this.add(mofusand)
-           
+
         }
 
         // Shark toevoegen
-            const shark = new Shark()
-            // shark.graphics.use(Resources.Shark.toSprite());
-            // shark.scale = new Vector(0.25, 0.25)
-            // shark.pos =  new Vector(Math.random() * 1280, Math.random() * 720)
-            // shark.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
-            this.add(shark);
-        
-            // Bubbles toevoegen
+        const shark = new Shark()
+
+        // shark.graphics.use(Resources.Shark.toSprite());
+        // shark.scale = new Vector(0.25, 0.25)
+        // shark.pos =  new Vector(Math.random() * 1280, Math.random() * 720)
+        // shark.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
+        this.add(shark);
+
+        // Bubbles toevoegen
         for (let i = 0; i < 20; i++) {
             const bubbles = new Bubbles()
             this.add(bubbles)
 
+        }
+
+
+        for (let i = 0; i < 10; i++) {
+            const scaredFish = new ScaredFish()
+            // scaredFish.graphics.use(Resources.ScaredFish.toSprite())
+            // scaredFish.scale = new Vector(5, 5)
+            // scaredFish.pos = new Vector(Math.random() * 1280, Math.random() * 720)      
+            // scaredFish.vel = new Vector(Math.random() * 200 - 100, Math.random() * 200 - 100)
+            // scaredFish.events.on("exitviewport", (e) => this.fishLeft(e))
+            this.add(scaredFish)
         }
 
     }

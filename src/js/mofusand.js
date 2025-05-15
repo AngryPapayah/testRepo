@@ -5,7 +5,6 @@ export class Mofusand extends Actor {
     onInitialize() {
         this.mofusandToRandomPosition();
         this.graphics.use(Resources.Mofusand.toSprite());
-
         this.events.on("exitviewport", (e) => this.mofusandToRandomPosition(e));
     }
 

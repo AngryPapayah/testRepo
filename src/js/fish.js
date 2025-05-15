@@ -14,5 +14,9 @@ export class Fish extends Actor {
         this.vel = new Vector(Math.random() * 100 - 50, Math.random() * 100 - 50);
         this.scale = new Vector(1, 1);
 
+        if (this.vel.x > 0) {
+            this.graphics.flipHorizontal = true
+
+        }
     }
 }
