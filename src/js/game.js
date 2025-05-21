@@ -5,6 +5,8 @@ import { Fish } from './fish.js'
 import { Mofusand } from './mofusand.js'
 import { Shark } from './shark.js'
 import { Bubbles } from './bubbles.js'
+import { UI } from './ui.js'
+import { Background } from './background.js'
 
 
 
@@ -70,16 +72,10 @@ export class Game extends Engine {
 
         }
 
+        const ui = new UI();
+        this.add(ui);
 
-        for (let i = 0; i < 10; i++) {
-            const scaredFish = new ScaredFish()
-            // scaredFish.graphics.use(Resources.ScaredFish.toSprite())
-            // scaredFish.scale = new Vector(5, 5)
-            // scaredFish.pos = new Vector(Math.random() * 1280, Math.random() * 720)      
-            // scaredFish.vel = new Vector(Math.random() * 200 - 100, Math.random() * 200 - 100)
-            // scaredFish.events.on("exitviewport", (e) => this.fishLeft(e))
-            this.add(scaredFish)
-        }
+        ui.updateScore(200);
 
     }
 
