@@ -3,7 +3,7 @@ import { Resources } from "./resources.js";
 
 export class Shark extends Actor {
 
-    speed = 300;
+    speed = 2.5;
 
     onInitialize() {
         this.sharkToRandomPosition();
@@ -11,10 +11,15 @@ export class Shark extends Actor {
         this.events.on("exitviewport", (e) => this.sharkToRandomPosition(e));
     }
 
+    // leftKey;
+    // rightKey;
+    // upKey;
+    // downKey;
+
     onPreUpdate(engine) {
-       let xspeed = 0;
-       let yspeed = 0;
-       
+        let xspeed = 0;
+        let yspeed = 0;
+
         if (engine.input.keyboard.isHeld("ArrowUp")) {
             yspeed = -this.speed;
         }
@@ -38,9 +43,9 @@ export class Shark extends Actor {
 
         if (this.vel.x > 0) {
             this.graphics.flipHorizontal = true
-         
+
         }
-        
+
         // handleCollision(event){
         //     if (event.other instanceof Fish) {
         //         event.other.owner.hit();
@@ -49,7 +54,7 @@ export class Shark extends Actor {
         // }
     }
 
-   
+
 
 
 }

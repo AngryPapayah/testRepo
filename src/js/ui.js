@@ -3,6 +3,7 @@ import { Actor, Color, Font, Label, Vector } from "excalibur";
 export class UI extends Actor {
     label;
     
+    
     onInitialize(engine) {
         this.label = new Label({
             text: 'Score: 0',
